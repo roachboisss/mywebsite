@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Homes</title>
+    <link href="../../../style.css" rel="stylesheet" />
+    <link href="../../../hide-show-screen.css" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/4a8ca3dd91.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../../assets/images/logo.png"
+    />
+  </head>
+  <style>
+    .text {
+      font-size: 20px;
+      font-weight: bold;
+      text-indent: 3%;
+      text-align: justify;
+      word-wrap: break-word;
+      width: 50%;
+    }
+  </style>
+  <body>
+    <header>
+      <p class="hub">
+        <i class="fa-solid fa-bars"></i>&#160;<a href="../../../Hub.html">Hub</a
+        >/Movies/Home-Alone-1
+      </p>
+      <a
+      ><button id="hidescreen" class="hidescreen" onclick="dim()">
+        Hide screen
+      </button></a
+    >
+    <div id="dimmer">
+      <a
+        ><button id="showscreen" class="showscreen" onclick="undim()" hidden>
+          Show screen
+        </button></a
+      >
+    </div>
+    <script src="../../../hide-show-screen.js"></script>
+      <p style="border-radius: 50%">
+        <img src="../../../assets/images/logo.png" height="25" width="25" />
+      </p>
+    </header>
+    <img
+      src="https://hitwebcounter.com/counter/counter.php?page=8403237&style=0007&nbdigits=7&type=ip&initCount=0"
+      title="Free Counter"
+      alt="web counter"
+      border="0"
+    />
+    <noscript
+    style="
+      font-weight: bolder;
+      font-size: 20px;
+      color: red;
+      text-align: center;
+    "
+    >Enable javascript to watch!</noscript
+  >
+    <div id="info">
+      <p class="text">
+        Press the fullscreen button to watch. There may be some websites that
+        pop up, just close out of thoes IMMEDIATELY and DO NOT trust them. It may take a
+        little bit for the movie to load. Sit back and enjoy!
+      </p>
+      <a><button onclick="dismiss()">Dismiss</button></a>
+    </div>
+<br>
+
+<video controls src="magnet:?xt=urn:btih:b127082dec04240fb9d617c23bfa3df47e2dc0c7&dn=Home+Alone+(1990)&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.istole.it%3A80&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.pomf.se%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80" data-path="Home Alone (1990)/Home.Alone.1990.720p.BluRay.x264.YIFY.mp4"></video>
+<script src="https://cdn.jsdelivr.net/npm/@webtor/player-sdk-js/dist/index.min.js" charset="utf-8" async></script>
+
+<br><br><br>
+    <footer>
+      <p>Copyright &copy; 2023. All rights reserved.</p>
+    </footer>
+  </body>
+  <script>
+    function dismiss() {
+      document.getElementById("info").style.display = "none";
+    }
+  </script>
+</html>
