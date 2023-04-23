@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
     <script
       src="https://kit.fontawesome.com/4a8ca3dd91.js"
       crossorigin="anonymous"
     ></script>
-
+    <link rel="icon" type="image/x-icon" href="../../assets/images/logo.png" />
+    <link href="../../hide-show-screen.css" rel="stylesheet">
     <title>How platforms work</title>
 
     <style>
+      .mobileonlytext {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .mobileonlytext {
+    display: block;
+  }
+}
       .hub {
         font-weight: bold;
         font-size: 20px;
@@ -76,8 +87,24 @@
   <body translate="no">
     <header>
       <p class="hub">
-        <i class="fa-solid fa-bars"></i>&#160;<a href="../../Hub.html">Hub</a
-        >/Platform
+        <i class="fa-solid fa-bars"></i>&#160;<a href="../../Hub.html">Hub</a>/Games/Platform
+      </p>
+      <a
+      ><button id="hidescreen" class="hidescreen" onclick="dim()">
+        Hide screen
+      </button></a
+    >
+    <div id="dimmer">
+      <a
+        ><button id="showscreen" class="showscreen" onclick="undim()" hidden>
+          Show screen
+        </button></a
+      >
+
+    </div>
+    <script src="../../hide-show-screen.js"></script>
+      <p style="border-radius: 50%;">
+        <img src="../../assets/images/logo.png" height="25" width="25" />
       </p>
     </header>
     <img
@@ -86,6 +113,10 @@
       alt="web counter"
       border="0"
     />
+    <noscript
+      style="font-weight: bolder; font-size: 20px; color: red; text-align: center"
+      >Enable javascript to play!</noscript
+    >
     <footer>
       <p>Copyright &copy; 2023. All rights reserved.</p>
     </footer>

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>TEST-Hub</title>
     <script src="https://kit.fontawesome.com/4a8ca3dd91.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="../assets/images/logo.png">
+    <link href="../hide-show-screen.css" rel="stylesheet">
   </head>
   <style>
 .title {
@@ -71,21 +73,45 @@ font-weight: bolder;
       float: right;
       margin: 10px 12px 3px 4px;
     }
-/*---------------------------------------------------------------------*/
 body {
   background-image: linear-gradient(to bottom right, white,lightgray , rgba(128, 128, 128, 0.7), rgba(0, 0, 0, 0.6));
 }
-/*---------------------------------------------------------------------*/
+.mobileonlytext {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .mobileonlytext {
+    display: block;
+  }
+}
 </style>
   <body>
           <header>
-          <p class="hub"><i class="fa-solid fa-bars"></i>&#160;<a href="../logged-in.0973598683xnn8g87gq37r8hq9w7dyh973grp97ghf97pwub3gvfp973wfhbw97pegfbp937whefp89q3gfh9wuehn9f7g3w9/logged-hub.html">Logged-Hub</a>/TEST-Hub</p>
-          </header>
+          <p class="hub"><i class="fa-solid fa-bars"></i>&#160;Hub/<a href="../logged-in.0973598683xnn8g87gq37r8hq9w7dyh973grp97ghf97pwub3gvfp973wfhbw97pegfbp937whefp89q3gfh9wuehn9f7g3w9/logged-hub.html">Logged-Hub</a>/Replica/TEST-Hub</p>
+          </div>
+          <a
+          ><button id="hidescreen" class="hidescreen" onclick="dim()">
+            Hide screen
+          </button></a
+        >
+        <div id="dimmer">
+          <a
+            ><button id="showscreen" class="showscreen" onclick="undim()" hidden>
+              Show screen
+            </button></a
+          >
+    
+        </div>
+        <script src="../hide-show-screen.js"></script>
+          <p style="border-radius: 50%;"><img src="../assets/images/logo.png" height="25" width="25"></p>
+        </header>
           <img src="https://hitwebcounter.com/counter/counter.php?page=8403237&style=0007&nbdigits=7&type=ip&initCount=0" title="Free Counter" Alt="web counter"   border="0" />
+          <noscript style="font-weight: bolder; font-size: 20px; color: red; text-align: center">May require javascript!</noscript>
           <br><br><br>
           <hr class="solid">
           <p class="subtitle middle"><b>🚧TEST HUB🚧</b></p>
-<hr class="solid">
+        <hr class="solid">
 <br><br><br>
           <p class="title">Websites:</p>
 <div>
@@ -94,18 +120,18 @@ body {
     <p class="subtitle">Games</p>
     <hr class="solid">
     <li><a href="../games/chatroom/index.html">Chatroom</a></li>
-    <li><a href="../games/snake/index.html">Snake</a></li>
-    <li><a href="../games/pacman/index.html">Pacman</a></li>
     <li><a href="../games/stack/index.html">Stack</a></li>
     <li><a href="../games/dino/index.html">Dino game</a></li>
-    <li><a href="../games/hang-man/index.html">Hang man</a></li>
-    <li><a href="../games/platform/index.html">Platform</a></li>
-    <li><a href="../games/platform2/index.html">Platform2</a></li>
-    <li><a href="../games/stick-hero/index.html">Stick Hero</a></li>
+    <li><a href="../games/snake/index.html">Snake</a><div class="mobileonlytext"><p>(Doesnt work for mobile)</p></div></li>
+    <li><a href="../games/pacman/index.html">Pacman</a><div class="mobileonlytext"><p>(Doesnt work for mobile)</p></div></li>
+    <li><a href="../games/hang-man/index.html">Hang man</a><div class="mobileonlytext"><p>(Doesnt work for mobile)</p></div></li>
+    <li><a href="../games/platform/index.html">Platform</a><div class="mobileonlytext"><p>(Doesnt work for mobile)</p></div></li>
+    <li><a href="../games/platform2/index.html">Platform2</a><div class="mobileonlytext"><p>(Doesnt work for mobile)</p></div></li>
+    <li><a href="../games/stick-hero/index.html">Stick Hero</a><div class="mobileonlytext"><p>(Doesnt work for mobile)</p></div></li>
     <br>
     <p class="subtitle">Hubs</p>
     <hr class="solid">
-    <li><a href="../login.html">Logged in Hub (requires password)</a></li>
+    <li><a href="../logged-in.0973598683xnn8g87gq37r8hq9w7dyh973grp97ghf97pwub3gvfp973wfhbw97pegfbp937whefp89q3gfh9wuehn9f7g3w9/logged-hub.html">Logged Hub</a></li>
   </ul>
   </p>
 </div> 

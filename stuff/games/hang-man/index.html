@@ -5,453 +5,494 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Menu</title>
-    <script src="https://kit.fontawesome.com/4a8ca3dd91.js" crossorigin="anonymous"></script>
+    <link href="../../hide-show-screen.css" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/4a8ca3dd91.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/logo.png" />
   </head>
   <style>
-
-.hub {
-  font-weight: bold;
-  font-size: 20px;
-}
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-image: linear-gradient(to bottom right, white,lightgray , rgba(128, 128, 128, 0.7), rgba(0, 0, 0, 0.6));
+.mobileonlytext {
+  display: none;
 }
 
-header {
-  background-color: grey;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 20px;
+@media only screen and (max-width: 768px) {
+  .mobileonlytext {
+    display: block;
+  }
 }
+    .hub {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: linear-gradient(to bottom right, white,lightgray , rgba(128, 128, 128, 0.7), rgba(0, 0, 0, 0.6));
+    }
 
-footer {
-  background-color: grey;
-  display: flex;
-  justify-content: center;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
-}
-html {
-    height: 100%;
-}
-body {
-    height: 100%;
-    margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-#main-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-style: solid;
-  border-width: 5px;
-  border-radius: 10px;
-  padding: 20px 30px 20px 30px;
-  margin: 50px 100px 50px 100px;
-}
+    header {
+      background-color: grey;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
 
-.number {
-  padding: 5px 10px 5px 10px;
-  border-width: 1px;
-  border-style: dashed;
-  border-radius: 10px;
-  background: #bdbcc9;
-}
+    footer {
+      background-color: grey;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 40px;
+    }
+    html {
+        height: 100%;
+    }
+    body {
+        height: 100%;
+        margin: 0;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    #main-div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-style: solid;
+      border-width: 5px;
+      border-radius: 10px;
+      padding: 20px 30px 20px 30px;
+      margin: 50px 100px 50px 100px;
+    }
 
-#game {
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-style: dashed;
-  border-width: 2px;
-  border-radius: 10px;
-  padding: 7px 10px 10px 5px;
-}
+    .number {
+      padding: 5px 10px 5px 10px;
+      border-width: 1px;
+      border-style: dashed;
+      border-radius: 10px;
+      background: #bdbcc9;
+    }
 
-#hang-man {
-  margin: 15px 10px 25px 10px;
-}
+    #game {
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-style: dashed;
+      border-width: 2px;
+      border-radius: 10px;
+      padding: 7px 10px 10px 5px;
+    }
 
-.right-margin {
-  margin-right: 10px;
-  font-size: 25px;
-}
+    #hang-man {
+      margin: 15px 10px 25px 10px;
+    }
 
-.width {
-  padding-right: 50px;
-  padding-left: 50px;
-}
+    .right-margin {
+      margin-right: 10px;
+      font-size: 25px;
+    }
 
-.red {
-  color: #9e0000;
-}
+    .width {
+      padding-right: 50px;
+      padding-left: 50px;
+    }
 
-.yellow {
-  color: #9e9100;
-}
+    .red {
+      color: #9e0000;
+    }
 
-.green {
-  color: #006e00;
-}
+    .yellow {
+      color: #9e9100;
+    }
 
-.img {
-  margin: 10px 2px 10px 2px;
-}
+    .green {
+      color: #006e00;
+    }
 
-</style>
+    .img {
+      margin: 10px 2px 10px 2px;
+    }
+  </style>
   <body>
     <header>
-        <p class="hub"><i class="fa-solid fa-bars"></i>&#160;<a href="../../Hub.html">Hub</a>/Hang-man</p>
-        </header>
-        <img src="https://hitwebcounter.com/counter/counter.php?page=8403237&style=0007&nbdigits=7&type=ip&initCount=0" title="Free Counter" Alt="web counter"   border="0" />
-        <div id="main-div">
-            <div id="game">
-              <h1 id="hang-man">Hangman</h1>
-            </div>
-            <div><button id="create-game" class="btn btn-primary">New Game</button></div>
-          </div>
-<footer>
-  <p>Copyright &copy; 2023. All rights reserved.</p>
-</footer>
- </body>
- <script>
+      <p class="hub">
+        <i class="fa-solid fa-bars"></i>&#160;<a href="../../Hub.html">Hub</a>/Games/Hang-man
+      </p>
+      <a
+      ><button id="hidescreen" class="hidescreen" onclick="dim()">
+        Hide screen
+      </button></a
+    >
+    <div id="dimmer">
+      <a
+        ><button id="showscreen" class="showscreen" onclick="undim()" hidden>
+          Show screen
+        </button></a
+      >
+
+    </div>
+    <script src="../../hide-show-screen.js"></script>
+      <p style="border-radius: 50%;">
+        <img src="../../assets/images/logo.png" height="25" width="25" />
+      </p>
+    </header>
+    <img
+      src="https://hitwebcounter.com/counter/counter.php?page=8403237&style=0007&nbdigits=7&type=ip&initCount=0"
+      title="Free Counter"
+      Alt="web counter"
+      border="0"
+    />
+    <noscript
+      style="font-weight: bolder; font-size: 20px; color: red; text-align: center;"
+      >Enable javascript to play!</noscript
+    >
+    <div id="main-div">
+      <div id="game">
+        <h1 id="hang-man">Hangman</h1>
+      </div>
+      <div>
+        <button id="create-game" class="btn btn-primary">New Game</button>
+      </div>
+    </div>
+    <footer>
+      <p>Copyright &copy; 2023. All rights reserved.</p>
+    </footer>
+  </body>
+  <script>
     const hardWords = [
-  "extraterrestrial",
-  "characteristic",
-  "recommendation",
-  "superintendent",
-  "correspondence",
-  "infrastructure",
-  "representative",
-  "environmental",
-  "entertainment",
-  "demonstration",
-  "rehabilitation",
-  "constellation",
-  "embarrassment",
-  "disappointment",
-  "strikebreaker",
-  "supplementary",
-  "neighborhood",
-  "intelligence",
-  "constitutional",
-  "conglomerate"
-];
+      "extraterrestrial",
+      "characteristic",
+      "recommendation",
+      "superintendent",
+      "correspondence",
+      "infrastructure",
+      "representative",
+      "environmental",
+      "entertainment",
+      "demonstration",
+      "rehabilitation",
+      "constellation",
+      "embarrassment",
+      "disappointment",
+      "strikebreaker",
+      "supplementary",
+      "neighborhood",
+      "intelligence",
+      "constitutional",
+      "conglomerate",
+    ];
 
-const mediumWords = [
-  "dominant",
-  "greeting",
-  "generate",
-  "monopoly",
-  "broccoli",
-  "syndrome",
-  "nominate",
-  "facility",
-  "abundant",
-  "displace",
-  "district",
-  "delivery",
-  "momentum",
-  "opposite",
-  "standard",
-  "pavement",
-  "prisoner",
-  "mushroom",
-  "wardrobe",
-  "marathon"
-];
+    const mediumWords = [
+      "dominant",
+      "greeting",
+      "generate",
+      "monopoly",
+      "broccoli",
+      "syndrome",
+      "nominate",
+      "facility",
+      "abundant",
+      "displace",
+      "district",
+      "delivery",
+      "momentum",
+      "opposite",
+      "standard",
+      "pavement",
+      "prisoner",
+      "mushroom",
+      "wardrobe",
+      "marathon",
+    ];
 
-const easyWords = [
-  "claim",
-  "bomb",
-  "store",
-  "sign",
-  "idea",
-  "wire",
-  "wheat",
-  "gun",
-  "carry",
-  "anger",
-  "cater",
-  "jury",
-  "match",
-  "mask",
-  "feast",
-  "fall",
-  "venus",
-  "dry",
-  "boat",
-  "crime"
-];
+    const easyWords = [
+      "claim",
+      "bomb",
+      "store",
+      "sign",
+      "idea",
+      "wire",
+      "wheat",
+      "gun",
+      "carry",
+      "anger",
+      "cater",
+      "jury",
+      "match",
+      "mask",
+      "feast",
+      "fall",
+      "venus",
+      "dry",
+      "boat",
+      "crime",
+    ];
 
-// Hangman object creator class function
-class Hangman {
-  constructor(word, guesses) {
-    this.word = word.toLowerCase().split("");
-    this.guesses = guesses;
-    this.guessedLetters = [];
-  }
-  getPuzzle() {
-    let puzzle = "";
-
-    this.word.forEach(letter => {
-      if (this.guessedLetters.includes(letter) || letter === " ") {
-        puzzle += letter;
-      } else {
-        puzzle += "_ ";
+    // Hangman object creator class function
+    class Hangman {
+      constructor(word, guesses) {
+        this.word = word.toLowerCase().split("");
+        this.guesses = guesses;
+        this.guessedLetters = [];
       }
-    });
+      getPuzzle() {
+        let puzzle = "";
 
-    return puzzle;
-  }
-  guess(guess) {
-    if (
-      !this.guessedLetters.includes(guess) &&
-      guess.length === 1 &&
-      this.guesses !== 0
-    ) {
-      this.guessedLetters.push(guess);
-      if (this.word.includes(guess)) {
-        console.log("You guessed Right");
-        return this.getPuzzle();
-      } else {
-        this.guesses--;
-        console.log("You guessed wrong");
-        return this.getPuzzle();
-      }
-    } else if (
-      this.guessedLetters.includes(guess) &&
-      guess.length === 1 &&
-      this.guesses !== 0
-    ) {
-      return "You already guessed that letter";
-    } else if (
-      !this.guessedLetters.includes(guess) &&
-      guess.length === 1 &&
-      this.guesses === 0
-    ) {
-      return "Game Over";
-    }
-  }
-}
-
-// Generate a new game
-const newGame = (word, guessCount) =>
-  typeof word === "string" && typeof guessCount === "number"
-    ? new Hangman(word, guessCount)
-    : "Word or number of guesses not valid";
-
-// Generate a form for a new game
-const generateNewGameDom = () => {
-  const guessForm = document.createElement("input");
-  guessForm.setAttribute("type", "number");
-  guessForm.setAttribute("id", "guess-field");
-  guessForm.setAttribute("placeholder", "Guesses");
-  guessForm.setAttribute("max", 15);
-  guessForm.setAttribute("min", 1);
-  guessForm.setAttribute("class", "form-control");
-  const submitBtn = document.createElement("button");
-  submitBtn.setAttribute("id", "generate-game-btn");
-  submitBtn.setAttribute("class", "btn btn-outline-primary");
-  submitBtn.textContent = "submit";
-  
-  const guessLabeling = document.createElement("label");
-  guessLabeling.textContent = 'Number of Guesses:'
-  guessLabeling.appendChild(guessForm)
-
-  const fieldSet = document.createElement("fieldset");
-  fieldSet.setAttribute("id", "dificulty-fieldset");
-
-  const easyLvDiv = document.createElement("div");
-  const easyLvLabel = document.createElement("label");
-  easyLvLabel.setAttribute("class", "green right-margin");
-  easyLvLabel.textContent = "Easy";
-  easyLvDiv.appendChild(easyLvLabel);
-  const easyLv = document.createElement("input");
-  easyLv.setAttribute("class", "lvl1");
-  easyLv.setAttribute("type", "radio");
-  easyLv.setAttribute("name", "level");
-  easyLv.setAttribute("value", "easy");
-  easyLvDiv.appendChild(easyLv);
-
-  const mediumLvDiv = document.createElement("div");
-  const mediumLvLabel = document.createElement("label");
-  mediumLvLabel.textContent = "Medium";
-  mediumLvLabel.setAttribute("class", "yellow right-margin");
-  mediumLvDiv.appendChild(mediumLvLabel);
-  const mediumLv = document.createElement("input");
-  mediumLv.setAttribute("class", "lvl2");
-  mediumLv.setAttribute("type", "radio");
-  mediumLv.setAttribute("name", "level");
-  mediumLv.setAttribute("value", "medium");
-  mediumLvDiv.appendChild(mediumLv);
-
-  const hardLvDiv = document.createElement("div");
-  const hardLvLabel = document.createElement("label");
-  hardLvLabel.setAttribute("class", "red right-margin");
-  hardLvLabel.textContent = "Hard";
-  hardLvDiv.appendChild(hardLvLabel);
-  const hardLv = document.createElement("input");
-  hardLv.setAttribute("class", "lvl3");
-  hardLv.setAttribute("type", "radio");
-  hardLv.setAttribute("name", "level");
-  hardLv.setAttribute("value", "hard");
-  hardLvDiv.appendChild(hardLv);
-
-  const form = document.createElement("form");
-  form.setAttribute("id", "game-form");
-  form.setAttribute("class", "form-group");
-  form.appendChild(guessLabeling);
-  form.appendChild(easyLvDiv);
-  form.appendChild(mediumLvDiv);
-  form.appendChild(hardLvDiv);
-  form.appendChild(submitBtn);
-
-  const bootDiv = document.createElement("div");
-  bootDiv.setAttribute("class", "form-group");
-  bootDiv.appendChild(form);
-
-  const gameForm = document.querySelector("#game");
-  gameForm.setAttribute("class", "container text-center");
-  gameForm.appendChild(bootDiv);
-};
-
-// Reset Game
-const resetGame = type => {
-  const gameForm = document.querySelector("#game");
-
-  const resetBtn = document.createElement("button");
-  resetBtn.textContent = "Play again";
-  resetBtn.setAttribute("id", "reset-game");
-  resetBtn.setAttribute("target", "_blank");
-  resetBtn.setAttribute("class", "btn btn-outline-dark");
-  gameForm.appendChild(resetBtn);
-
-  const resetBtnComplete = document.querySelector("#reset-game");
-  resetBtnComplete.addEventListener("click", e => {
-    e.preventDefault();
-   window.location.href = window.location.href;
-  });
-};
-
-// Generate the game
-const gameGenerator = function(obj) {
-  const gameForm = document.querySelector("#game");
-  gameForm.innerHTML = "";
-
-  const gameWord = document.createElement("h3");
-  gameWord.textContent = obj.getPuzzle();
-  gameForm.appendChild(gameWord);
-
-  const gameGuesses = document.createElement("p");
-  gameGuesses.innerHTML = `Remaining Guesses: <span class="number">${
-    obj.guesses
-  }</span>`;
-  gameForm.appendChild(gameGuesses);
-
-  const gameObject = obj.getPuzzle();
-  const guessObject = obj.guesses;
-
-  if (!gameObject.includes("_ ")) {
-    const finishGame = document.createElement("h2");
-    finishGame.setAttribute("class", "green");
-    finishGame.textContent = "YOU WON THIS GAME!!!";
-    gameForm.appendChild(finishGame);
-    
-    const winImg = document.createElement("img");
-    winImg.setAttribute("class", "img");
-    gameForm.appendChild(winImg);
-
-    resetGame();
-  } else if (gameObject.includes("_ ") && guessObject === 0) {
-    const lostGame = document.createElement("h2");
-    lostGame.setAttribute("class", "red");
-    lostGame.textContent = "Game Over. Try Again";
-    gameForm.appendChild(lostGame);
-    
-    const correctWord = document.createElement("p");
-    correctWord.setAttribute("class", "yellow");
-    correctWord.innerHTML = `Word: <span class="number">${obj.word.join('')}</span>`;
-    gameForm.appendChild(correctWord);
-    
-    const lostImg = document.createElement("img");
-    lostImg.setAttribute("class", "img")
-    gameForm.appendChild(lostImg);
-    
-    resetGame();
-  }
-};
-
-const createGame = document.querySelector("#create-game");
-
-createGame.addEventListener("click", e => {
-  e.preventDefault();
-  const gameForm = document.querySelector("#game");
-  gameForm.innerHTML = "";
-
-  const content = gameForm.innerHTML;
-  const button = document.querySelector("#create-game");
-  if (content === "") {
-    generateNewGameDom();
-    button.remove();
-    const gameInput = gameForm.querySelector("#game-form");
-    gameInput.addEventListener("submit", e => {
-      e.preventDefault();
-
-      let currentGame;
-
-      const guessing = document.querySelector("#guess-field");
-      const guessingNum = parseInt(guessing.value, 10);
-
-      const level = document.getElementsByName("level");
-      let levelValue;
-      for (let i in level) {
-        if (level[i].checked) {
-          levelValue = level[i].value;
-        }
-      }
-      console.log(levelValue);
-
-      const min = Math.ceil(0);
-      const max = Math.floor(20);
-      const randomNum = Math.floor(Math.random() * (max - min)) + min;
-      if (guessingNum <= 15) {
-        if (levelValue === "easy") {
-          currentGame = new Hangman(easyWords[randomNum], guessingNum);
-          console.log(currentGame);
-        } else if (levelValue === "medium") {
-          currentGame = new Hangman(mediumWords[randomNum], guessingNum);
-          console.log(currentGame);
-        } else if (levelValue === "hard") {
-          currentGame = new Hangman(hardWords[randomNum], guessingNum);
-          console.log(currentGame);
-        }
-      }
-
-      if (currentGame) {
-        gameGenerator(currentGame);
-        window.addEventListener("keypress", e => {
-          let guessVal = String.fromCharCode(e.charCode);
-          guessVal = guessVal.toLowerCase();
-          currentGame.guess(guessVal);
-          gameGenerator(currentGame);
+        this.word.forEach((letter) => {
+          if (this.guessedLetters.includes(letter) || letter === " ") {
+            puzzle += letter;
+          } else {
+            puzzle += "_ ";
+          }
         });
+
+        return puzzle;
+      }
+      guess(guess) {
+        if (
+          !this.guessedLetters.includes(guess) &&
+          guess.length === 1 &&
+          this.guesses !== 0
+        ) {
+          this.guessedLetters.push(guess);
+          if (this.word.includes(guess)) {
+            console.log("You guessed Right");
+            return this.getPuzzle();
+          } else {
+            this.guesses--;
+            console.log("You guessed wrong");
+            return this.getPuzzle();
+          }
+        } else if (
+          this.guessedLetters.includes(guess) &&
+          guess.length === 1 &&
+          this.guesses !== 0
+        ) {
+          return "You already guessed that letter";
+        } else if (
+          !this.guessedLetters.includes(guess) &&
+          guess.length === 1 &&
+          this.guesses === 0
+        ) {
+          return "Game Over";
+        }
+      }
+    }
+
+    // Generate a new game
+    const newGame = (word, guessCount) =>
+      typeof word === "string" && typeof guessCount === "number"
+        ? new Hangman(word, guessCount)
+        : "Word or number of guesses not valid";
+
+    // Generate a form for a new game
+    const generateNewGameDom = () => {
+      const guessForm = document.createElement("input");
+      guessForm.setAttribute("type", "number");
+      guessForm.setAttribute("id", "guess-field");
+      guessForm.setAttribute("placeholder", "Guesses");
+      guessForm.setAttribute("max", 15);
+      guessForm.setAttribute("min", 1);
+      guessForm.setAttribute("class", "form-control");
+      const submitBtn = document.createElement("button");
+      submitBtn.setAttribute("id", "generate-game-btn");
+      submitBtn.setAttribute("class", "btn btn-outline-primary");
+      submitBtn.textContent = "submit";
+
+      const guessLabeling = document.createElement("label");
+      guessLabeling.textContent = "Number of Guesses:";
+      guessLabeling.appendChild(guessForm);
+
+      const fieldSet = document.createElement("fieldset");
+      fieldSet.setAttribute("id", "dificulty-fieldset");
+
+      const easyLvDiv = document.createElement("div");
+      const easyLvLabel = document.createElement("label");
+      easyLvLabel.setAttribute("class", "green right-margin");
+      easyLvLabel.textContent = "Easy";
+      easyLvDiv.appendChild(easyLvLabel);
+      const easyLv = document.createElement("input");
+      easyLv.setAttribute("class", "lvl1");
+      easyLv.setAttribute("type", "radio");
+      easyLv.setAttribute("name", "level");
+      easyLv.setAttribute("value", "easy");
+      easyLvDiv.appendChild(easyLv);
+
+      const mediumLvDiv = document.createElement("div");
+      const mediumLvLabel = document.createElement("label");
+      mediumLvLabel.textContent = "Medium";
+      mediumLvLabel.setAttribute("class", "yellow right-margin");
+      mediumLvDiv.appendChild(mediumLvLabel);
+      const mediumLv = document.createElement("input");
+      mediumLv.setAttribute("class", "lvl2");
+      mediumLv.setAttribute("type", "radio");
+      mediumLv.setAttribute("name", "level");
+      mediumLv.setAttribute("value", "medium");
+      mediumLvDiv.appendChild(mediumLv);
+
+      const hardLvDiv = document.createElement("div");
+      const hardLvLabel = document.createElement("label");
+      hardLvLabel.setAttribute("class", "red right-margin");
+      hardLvLabel.textContent = "Hard";
+      hardLvDiv.appendChild(hardLvLabel);
+      const hardLv = document.createElement("input");
+      hardLv.setAttribute("class", "lvl3");
+      hardLv.setAttribute("type", "radio");
+      hardLv.setAttribute("name", "level");
+      hardLv.setAttribute("value", "hard");
+      hardLvDiv.appendChild(hardLv);
+
+      const form = document.createElement("form");
+      form.setAttribute("id", "game-form");
+      form.setAttribute("class", "form-group");
+      form.appendChild(guessLabeling);
+      form.appendChild(easyLvDiv);
+      form.appendChild(mediumLvDiv);
+      form.appendChild(hardLvDiv);
+      form.appendChild(submitBtn);
+
+      const bootDiv = document.createElement("div");
+      bootDiv.setAttribute("class", "form-group");
+      bootDiv.appendChild(form);
+
+      const gameForm = document.querySelector("#game");
+      gameForm.setAttribute("class", "container text-center");
+      gameForm.appendChild(bootDiv);
+    };
+
+    // Reset Game
+    const resetGame = (type) => {
+      const gameForm = document.querySelector("#game");
+
+      const resetBtn = document.createElement("button");
+      resetBtn.textContent = "Play again";
+      resetBtn.setAttribute("id", "reset-game");
+      resetBtn.setAttribute("target", "_blank");
+      resetBtn.setAttribute("class", "btn btn-outline-dark");
+      gameForm.appendChild(resetBtn);
+
+      const resetBtnComplete = document.querySelector("#reset-game");
+      resetBtnComplete.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.location.href = window.location.href;
+      });
+    };
+
+    // Generate the game
+    const gameGenerator = function (obj) {
+      const gameForm = document.querySelector("#game");
+      gameForm.innerHTML = "";
+
+      const gameWord = document.createElement("h3");
+      gameWord.textContent = obj.getPuzzle();
+      gameForm.appendChild(gameWord);
+
+      const gameGuesses = document.createElement("p");
+      gameGuesses.innerHTML = `Remaining Guesses: <span class="number">${obj.guesses}</span>`;
+      gameForm.appendChild(gameGuesses);
+
+      const gameObject = obj.getPuzzle();
+      const guessObject = obj.guesses;
+
+      if (!gameObject.includes("_ ")) {
+        const finishGame = document.createElement("h2");
+        finishGame.setAttribute("class", "green");
+        finishGame.textContent = "YOU WON THIS GAME!!!";
+        gameForm.appendChild(finishGame);
+
+        const winImg = document.createElement("img");
+        winImg.setAttribute("class", "img");
+        gameForm.appendChild(winImg);
+
+        resetGame();
+      } else if (gameObject.includes("_ ") && guessObject === 0) {
+        const lostGame = document.createElement("h2");
+        lostGame.setAttribute("class", "red");
+        lostGame.textContent = "Game Over. Try Again";
+        gameForm.appendChild(lostGame);
+
+        const correctWord = document.createElement("p");
+        correctWord.setAttribute("class", "yellow");
+        correctWord.innerHTML = `Word: <span class="number">${obj.word.join(
+          ""
+        )}</span>`;
+        gameForm.appendChild(correctWord);
+
+        const lostImg = document.createElement("img");
+        lostImg.setAttribute("class", "img");
+        gameForm.appendChild(lostImg);
+
+        resetGame();
+      }
+    };
+
+    const createGame = document.querySelector("#create-game");
+
+    createGame.addEventListener("click", (e) => {
+      e.preventDefault();
+      const gameForm = document.querySelector("#game");
+      gameForm.innerHTML = "";
+
+      const content = gameForm.innerHTML;
+      const button = document.querySelector("#create-game");
+      if (content === "") {
+        generateNewGameDom();
+        button.remove();
+        const gameInput = gameForm.querySelector("#game-form");
+        gameInput.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          let currentGame;
+
+          const guessing = document.querySelector("#guess-field");
+          const guessingNum = parseInt(guessing.value, 10);
+
+          const level = document.getElementsByName("level");
+          let levelValue;
+          for (let i in level) {
+            if (level[i].checked) {
+              levelValue = level[i].value;
+            }
+          }
+          console.log(levelValue);
+
+          const min = Math.ceil(0);
+          const max = Math.floor(20);
+          const randomNum = Math.floor(Math.random() * (max - min)) + min;
+          if (guessingNum <= 15) {
+            if (levelValue === "easy") {
+              currentGame = new Hangman(easyWords[randomNum], guessingNum);
+              console.log(currentGame);
+            } else if (levelValue === "medium") {
+              currentGame = new Hangman(mediumWords[randomNum], guessingNum);
+              console.log(currentGame);
+            } else if (levelValue === "hard") {
+              currentGame = new Hangman(hardWords[randomNum], guessingNum);
+              console.log(currentGame);
+            }
+          }
+
+          if (currentGame) {
+            gameGenerator(currentGame);
+            window.addEventListener("keypress", (e) => {
+              let guessVal = String.fromCharCode(e.charCode);
+              guessVal = guessVal.toLowerCase();
+              currentGame.guess(guessVal);
+              gameGenerator(currentGame);
+            });
+          }
+        });
+      } else {
+        console.log("Form already generated");
       }
     });
-  } else {
-    console.log("Form already generated");
-  }
-});
-
- </script>
+  </script>
 </html>

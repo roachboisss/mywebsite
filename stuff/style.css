@@ -32,6 +32,7 @@ footer {
 .hub {
   font-weight: bold;
   font-size: 20px;
+  text-align: left;
 }
 .logo {
   background: lightblue;
@@ -48,3 +49,36 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+.mobileonlytext {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .mobileonlytext {
+    display: block;
+  }
+}
+.hidescreen {
+  text-align: center;
+  background-color: rgb(163, 163, 163);
+    border: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+  .showscreen {
+  text-align: center;
+  background-color: rgb(163, 163, 163);
+    border: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+  }

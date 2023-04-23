@@ -9,6 +9,8 @@
 <meta property="og:image" content="http://img.thecodepost.org/2015/01/trex.png">
 <meta property="og:site_name" content="The Code Post">
 <meta property="og:description" content="Google Chrome has a hidden T-Rex game only for offline mode. But now, you can enjoy it any time and on any device, but you gotta stay online!!!">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="../../hide-show-screen.css" rel="stylesheet">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@thecodepost">
@@ -18,6 +20,7 @@
 <meta name="twitter:image:src" content="http://img.thecodepost.org/2015/01/trex.png">
 <script src="https://kit.fontawesome.com/4a8ca3dd91.js" crossorigin="anonymous"></script>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
+<link rel="icon" type="image/x-icon" href="../../assets/images/logo.png">
 
 	<!--script type="text/javascript" src="a.js"></script-->
 	<script type="text/javascript">
@@ -1939,9 +1942,6 @@
 
 
 	<style>
-a {
-  color: #585858;
-}
 
 body.safe-browsing {
   background-color: rgb(206, 52, 38);
@@ -1950,11 +1950,6 @@ body.safe-browsing {
 
 [dir='rtl'] button {
   float: left;
-}
-
-button:active {
-  background: rgb(50, 102, 213);
-  outline: 0;
 }
 
 button:hover {
@@ -2008,7 +2003,6 @@ input[type=checkbox] {
 
 .safe-browsing button:active {
   background-color: rgb(206, 52, 38);
-  border-color: rgba(255, 255, 255, .6);
 }
 
 .safe-browsing button:hover {
@@ -2022,7 +2016,6 @@ input[type=checkbox] {
 }
 
 .small-link {
-  color: #696969;
   font-size: .875em;
 }
 
@@ -2102,12 +2095,6 @@ input[type=checkbox] {
 html[subframe] #main-frame-error {
   display: none;
 }
-
-a {
-  color: rgb(17, 85, 204);
-  text-decoration: none;
-}
-
 .icon-generic {
   /**
    * Can't access chrome://theme/IDR_ERROR_NETWORK_GENERIC from an untrusted
@@ -2129,28 +2116,22 @@ a {
 #help-box-inner {
   background-color: #f9f9f9;
   border-top: 1px solid #EEE;
-  color: #444;
   padding: 20px;
   text-align: start;
-}
-
-
-#sub-frame-error-details {
-  color: #8F8F8F;
-/* Not done on mobile for performance reasons. */
-  text-shadow: 0 1px 0 rgba(255,255,255,0.3);
 }
 
 [jscontent=failedUrl] {
   overflow-wrap: break-word;
 }
-
-#search-box:focus {
-  border: 1px solid rgb(93, 154, 255);
-  outline: none;
+.mobileonlytext {
+  display: none;
 }
 
-
+@media only screen and (max-width: 768px) {
+  .mobileonlytext {
+    display: block;
+  }
+}
 .hidden {
   display: none;
 }
@@ -2162,7 +2143,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(to bottom right, white,lightgray , rgba(128, 128, 128, 0.7), rgba(0, 0, 0, 0.6));
+  background-image: linear-gradient(to bottom right, white,lightgray , rgba(0, 0, 0, 0.6));
 }
 
 header {
@@ -2276,7 +2257,6 @@ footer {
 }
 
 .offline .controller {
-  background: rgba(247,247,247, .1);
   height: 100vh;
   left: 0;
   position: absolute;
@@ -2294,9 +2274,28 @@ footer {
 
 <body id="t">
     <header>
-        <p class="hub"><i class="fa-solid fa-bars"></i>&#160;<a href="../../Hub.html">Hub</a>/Dino</p>
+        <p class="hub"><i class="fa-solid fa-bars"></i>&#160;<a href="../../Hub.html"><u>Hub</u></a>/Games/Dino</p>
+        <a
+        ><button id="hidescreen" class="hidescreen" onclick="dim()">
+          Hide screen
+        </button></a
+      >
+      <div id="dimmer">
+        <a
+          ><button id="showscreen" class="showscreen" onclick="undim()" hidden>
+            Show screen
+          </button></a
+        >
+  
+      </div>
+      <script src="../../hide-show-screen.js"></script>
+        <p style="border-radius: 50%;"><img src="../../assets/images/logo.png" height="25" width="25"></p>
         </header>
         <img src="https://hitwebcounter.com/counter/counter.php?page=8403237&style=0007&nbdigits=7&type=ip&initCount=0" title="Free Counter" Alt="web counter"   border="0" />
+        <noscript
+        style="font-weight: bolder; font-size: 20px; color: red; text-align: center;"
+        >Enable javascript to play!</noscript
+      >
 <div id="main-frame-error" class="interstitial-wrapper" jstcache="0">
     <div class="onlyforchrome" style="font-size: 30px;text-align: center;font-family: Helvetica;">Running T-Rex</div>
     <div id="offline-resources" jstcache="0">

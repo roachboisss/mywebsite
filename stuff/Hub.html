@@ -7,6 +7,8 @@
     <title>Hub</title>
     <link href="style.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4a8ca3dd91.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+    <link href="hide-show-screen.css" rel="stylesheet">
   </head>
   <style>
 .title {
@@ -21,6 +23,21 @@ font-weight: bold;
   <body>
           <header>
           <p class="hub"><i class="fa-solid fa-bars"></i>&#160;<a href="Hub.html">Hub</a></p>
+          <a
+          ><button id="hidescreen" class="hidescreen" onclick="dim()">
+            Hide screen
+          </button></a
+        >
+        <div id="dimmer">
+          <a
+            ><button id="showscreen" class="showscreen" onclick="undim()" hidden>
+              Show screen
+            </button></a
+          >
+    
+        </div>
+        <script src="hide-show-screen.js"></script>
+          <p style="border-radius: 50%;"><img src="assets/images/logo.png" height="25" width="25"></p>
           </header>
           <img src="https://hitwebcounter.com/counter/counter.php?page=8403237&style=0007&nbdigits=7&type=ip&initCount=0" title="Free Counter" Alt="web counter"   border="0" />
 <p class="title">Websites:</p>
@@ -39,12 +56,31 @@ font-weight: bold;
     <li><a href="games/platform2/index.html">Platform2</a></li>
     <li><a href="games/stick-hero/index.html">Stick Hero</a></li>
     <br>
+    <p class="subtitle">Movies</p>
+    <hr class="solid">
+    <li><a href="movies/PussInBoots/1/PussInBoots1.html">Puss In Boots 1</a></li>
+    <li><a href="movies/PussInBoots/2/PussInBoots2.html">Puss In Boots 2</a></li>
+    <li><a href="movies/HomeAlone/1/HomeAlone1.html">Home Alone 1</a></li>
+    <li><a href="movies/HomeAlone/2/HomeAlone2.html">Home Alone 2</a></li>
+    <li><a href="movies/HomeAlone/3/HomeAlone3.html">Home Alone 3</a></li>
+    <li><a href="movies/Shrek/1/Shrek1.html">Shrek 1</a></li>
+    <li><a href="movies/Shrek/2/Shrek2.html">Shrek 2</a></li>
+    <li><a href="movies/Shrek/3/Shrek3.html">Shrek 3</a></li>
+    <li><a href="movies/Shrek/4/Shrek4.html">Shrek 4</a></li>
+    <li><a href="movies/JungleBook/JungleBook.html">Jungle Book</a></li>
+
+    <br>
     <p class="subtitle">Hubs</p>
     <hr class="solid">
     <li><a href="login.html">Logged in Hub (requires password)</a></li>
   </ul>
   </p>
 </div> 
+<div class="subtitle">
+<p>Have any suggestions? Email: "<a href="mailto:pickels1223@gmail.com">pickels1223@gmail.com</a>"</p>
+<p>You can suggest things like games to add, movies, or even just anything to add.</p>
+</div>
+<br><br><br>
 <footer>
   <p>Copyright &copy; 2023. All rights reserved.</p>
 </footer>

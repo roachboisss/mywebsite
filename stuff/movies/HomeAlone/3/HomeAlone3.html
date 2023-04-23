@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Homes</title>
+    <link href="../../../style.css" rel="stylesheet" />
+    <link href="../../../hide-show-screen.css" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/4a8ca3dd91.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../../assets/images/logo.png"
+    />
+  </head>
+  <style>
+    .text {
+      font-size: 20px;
+      font-weight: bold;
+      text-indent: 3%;
+      text-align: justify;
+      word-wrap: break-word;
+      width: 50%;
+    }
+  </style>
+  <body>
+    <header>
+      <p class="hub">
+        <i class="fa-solid fa-bars"></i>&#160;<a href="../../../Hub.html">Hub</a
+        >/Movies/Home-Alone-3
+      </p>
+      <a
+      ><button id="hidescreen" class="hidescreen" onclick="dim()">
+        Hide screen
+      </button></a
+    >
+    <div id="dimmer">
+      <a
+        ><button id="showscreen" class="showscreen" onclick="undim()" hidden>
+          Show screen
+        </button></a
+      >
+
+    </div>
+    <script src="../../../hide-show-screen.js"></script>
+      <p style="border-radius: 50%">
+        <img src="../../../assets/images/logo.png" height="25" width="25" />
+      </p>
+    </header>
+    <img
+      src="https://hitwebcounter.com/counter/counter.php?page=8403237&style=0007&nbdigits=7&type=ip&initCount=0"
+      title="Free Counter"
+      alt="web counter"
+      border="0"
+    />
+    <div id="info">
+      <p class="text">
+        Press the fullscreen button to watch. There may be some websites that
+        pop up, just close out of thoes IMMEDIATELY and DO NOT trust them. It may take a
+        little bit for the movie to load. Sit back and enjoy!
+      </p>
+      <a><button onclick="dismiss()">Dismiss</button></a>
+    </div>
+<br>
+
+<video controls src="magnet:?xt=urn:btih:f9c9004103adbba0d83894e0165ba3e43e624397&dn=Home+Alone+3+(1997)+%5BWEBRip%5D+%5B720p%5D+%5BYTS.AM%5D" data-path="Home Alone 3 (1997) [WEBRip] [720p] [YTS.AM]/Home.Alone.3.1997.720p.WEBRip.x264-[YTS.AM].mp4"></video>
+<script src="https://cdn.jsdelivr.net/npm/@webtor/player-sdk-js/dist/index.min.js" charset="utf-8" async></script>
+
+<br><br><br>
+    <footer>
+      <p>Copyright &copy; 2023. All rights reserved.</p>
+    </footer>
+  </body>
+  <script>
+    function dismiss() {
+      document.getElementById("info").style.display = "none";
+    }
+  </script>
+</html>

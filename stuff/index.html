@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Hub</title>
     <link href="style.css" rel="stylesheet" />
+    <link href="hide-show-screen.css" rel="stylesheet">
     <script
       src="https://kit.fontawesome.com/4a8ca3dd91.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <style>
     .title {
@@ -21,16 +24,14 @@
       font-weight: bold;
     }
     hr.solid {
-      border-top: 3px solid #bbb;
+      border-top: 3px solid darkgray;
     }
     header {
-      background-color: lightgray;
       display: flex;
       justify-content: space-between;
       padding: 10px 20px;
     }
     footer {
-      background-color: lightgray;
       display: flex;
       justify-content: center;
       padding: 10px 0;
@@ -59,10 +60,27 @@
       float: right;
       margin: 10px 12px 3px 4px;
     }
-    </style>
+  </style>
   <body>
     <header>
       <p class="hub">Welcome!</p>
+      <p style="border-radius: 50%;">
+        <a
+        ><button id="hidescreen" class="hidescreen" onclick="dim()">
+          Hide screen
+        </button></a
+      >
+      <div id="dimmer">
+        <a
+          ><button id="showscreen" class="showscreen" onclick="undim()" hidden>
+            Show screen
+          </button></a
+        >
+  
+      </div>
+      <script src="hide-show-screen.js"></script>
+        <img src="assets/images/logo.png" height="25" width="25" />
+      </p>
     </header>
     <img
       src="https://hitwebcounter.com/counter/counter.php?page=8403237&style=0007&nbdigits=7&type=ip&initCount=0"
@@ -89,7 +107,12 @@
         tempus iaculis velit.
       </p>
       <div class="image2">
-        <img src="assets/images/spongebob1.png" height="100px" width="100px" title="me when ur mom" />
+        <img
+          src="assets/images/spongebob1.png"
+          height="100px"
+          width="100px"
+          title="me when ur mom"
+        />
       </div>
       <p>
         Donec risus sem, venenatis quis eros at, maximus vehicula metus. Donec
@@ -101,7 +124,12 @@
         ultrices posuere cubilia curae; Fusce at mi urna.
       </p>
       <div class="image1">
-        <img src="assets/images/fortnite1.jpg" height="150px" width="125px" title="my frend jarquavious the second" />
+        <img
+          src="assets/images/fortnite1.jpg"
+          height="150px"
+          width="125px"
+          title="my frend jarquavious the second"
+        />
       </div>
       <p>
         Praesent non laoreet turpis. Phasellus dapibus turpis efficitur pharetra
@@ -109,8 +137,8 @@
         <b
           >All of this text is used just to fill in space. This has no meaning,
           its just so if someone is on it during school, teachers will just
-          think that you are reading. Scroll to the bottom and click "here" to go
-          to main content.</b
+          think that you are reading. Scroll to the bottom and click "here" to
+          go to main content.</b
         >
         Praesent consequat lectus nisl, nec molestie ex feugiat ac. Etiam sem
         lectus, tincidunt nec eros vitae, imperdiet sodales turpis. Fusce
@@ -132,11 +160,11 @@
         at risus tempus, quis ullamcorper ante iaculis.
       </p>
     </div>
-    <br><br><br>
+    <br /><br /><br />
     <p class="title">
       Click <a href="Hub.html">here</a> to go to the main page.
     </p>
-    <br><br><br>
+    <br /><br /><br />
     <footer>
       <p>Copyright &copy; 2023. All rights reserved.</p>
     </footer>
