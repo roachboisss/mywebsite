@@ -11,6 +11,7 @@
 <------------------------------------------------------------------------------------
 #    --ADD--
 ## doesnt require javascript
+= Add a section for different types of memes, add a lot of memes to each website --js--with a arrow that goes to the next one----
 
 ## requires javascript
 = add a browser to file
