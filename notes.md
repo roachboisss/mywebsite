@@ -4,6 +4,8 @@
 #    --DEBUGS--
 ## doesnt require javascript
 = fix index page logo style
+= add tos
+= add lisense and ageeement
 
 ## requires javascript
 
