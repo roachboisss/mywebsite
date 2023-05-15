@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>404</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="hide-show-screen.css" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/4a8ca3dd91.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <style>
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .subtitle {
+      font-size: 15px;
+      font-weight: bold;
+    }
+    hr.solid {
+      border-top: 3px solid darkgray;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+    footer {
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 40px;
+    }
+    body {
+      margin: 0px;
+    }
+    .hub {
+      font-weight: bold;
+      font-size: 20px;
+    }
+  </style>
+  <body>
+    <header>
+      <p class="hub">404 Error!</p>
+      <p style="border-radius: 50%;">
+        <a
+        ><button id="hidescreen" class="hidescreen" onclick="dim()">
+          Hide screen
+        </button></a
+      >
+      <div id="dimmer">
+        <a
+          ><button id="showscreen" class="showscreen" onclick="undim()" hidden>
+            Show screen
+          </button></a
+        >
+  
+      </div>
+      <script src="hide-show-screen.js"></script>
+        <img src="assets/images/logo.png" height="25" width="25" style="text-align: right;"/>
+      </p>
+    </header>
+    <img
+      src="https://hitwebcounter.com/counter/counter.php?page=8403237&style=0007&nbdigits=7&type=ip&initCount=0"
+      title="Free Counter"
+      alt="web counter"
+      border="0"
+    />
+<p class="title">404 Error!</p>
+<hr class="solid">
+<p class="subtitle">The page you are looking for has either been moved, deleted, or just doesn't exist.</p>
+    <p class="subtitle">
+      Click <a href="Hub.html">here</a> to go to the main page, click <a href="javascript:history.back()">here</a> to go back.
+    </p>
+    <br /><br /><br />
+    <footer>
+      <p>Copyright &copy; 2023. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
