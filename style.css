@@ -82,3 +82,10 @@ body {
     cursor: pointer;
     border-radius: 12px;
   }
+  code {
+    font-family: Consolas,"courier new";
+    color: crimson;
+    background-color: #f1f1f1;
+    padding: 2px;
+    font-size: 105%;
+  }

